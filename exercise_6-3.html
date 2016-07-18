@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+	  <title>Exercise 6-3</title>
+   </head>
+   <body>
+      <h1>Temperature Convertor</h1> 
+      <p><input type="text" id="temperature" />
+	     <button id="f_to_c">F to C</button>
+		 <button id="c_to_f">C to F</button>
+	  </p>  
+      <p id="result"></p>
+      <script>
+	     var report = function (celsius, fahrenheit) {
+            document.getElementById("result").innerHTML =
+            celsius + "\xb0C = " + fahrenheit + "\xb0F";
+};
+
+         document.getElementById("f_to_c").onclick = function () {
+            var f = document.getElementById("temperature").value;
+            report((f - 32) / 1.8, f);
+};
+
+         document.getElementById("c_to_f").onclick = function () {
+            var c = document.getElementById("temperature").value;
+            report(c, 1.8 * c + 32);
+};
+	  </script>
+   </body>
+</html>
+
+<!--The difference between a <button> tag and an <input> tag is in a 
+<button> tag you can include images. The <button> tag doesn't 
+automatically submit the form there needs to be a script to activate it.
