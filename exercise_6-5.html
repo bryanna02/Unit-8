@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+	  <title>Exercise 6-5</title>
+   </head>
+   <body>
+      <h1>Calculate your tip</h1> 
+	  <p>Price: <input type="number" id="price"/><br><br>
+	     Tip %: <input type="number" id="tipRate"/>
+		 <div id="sum"></div><br>
+		 <button onclick="add()">Calculate</button>
+   <script>
+	  var price;
+	  var tip;
+	  var sum; 
+	  
+	  function add() {
+	     price=parseInt(document.getElementById("price").value);
+		 tip=parseInt(document.getElementById("tipRate").value) / 100;
+		 
+		 sum=(price + (price * tip));
+	  
+	  document.getElementById("sum").innerHTML= "Your total price is $" + sum;
+      };
+   </script>
+   </body>
+</html>
